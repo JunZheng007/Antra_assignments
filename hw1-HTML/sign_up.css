@@ -1,6 +1,82 @@
 #sign_up_div {
-    width: 500px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* background-color: lightblue; */
+  text-align: center;
+  border: 2px solid black;
+  padding: 50px 20px;
+}
+
+section {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+input,
+button {
+  width: 92%;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.name,
+.password,
+button {
+  width: 45%;
+}
+
+input:focus {
+  outline: 1px solid rgb(118, 183, 235);
+}
+
+#agreement_section {
+  text-align: start;
+}
+
+#agreement_checkbox {
+  margin-left: 25px;
+  height: 15px;
+  width: 15px;
+  text-align: start;
+}
+
+#inline_register {
+  font-size: 0.8em;
+  background-color: rgb(66, 139, 202);
+  color: white;
+  padding: 0.1em 0.5em;
+}
+
+#agreement_text {
+  display: inline-block;
+  /* position: relative;
+  left: 80px; */
+  font-size: 0.8em;
+  width: 66%;
+  margin-left: 80px;
+  margin-right: 0;
+  text-align: start;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(67, 139, 202);
+}
+
+button {
+  font: 1.15em sans-serif;
+  color: white;
+}
+
+#register_button {
+  background-color: rgb(66, 139, 202);
+}
+
+#sign_in_button {
+  background-color: rgb(92, 184, 92);
 }
