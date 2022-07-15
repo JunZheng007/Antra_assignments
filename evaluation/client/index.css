@@ -1,0 +1,72 @@
+:root {
+    --height-container: 450px;
+    --width-container: 850px;
+
+    --height-movie: 400px;
+    --width-movie: 200px;
+
+    --height-movie-picture: 300px;
+    --width-movie-picture: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+}
+
+#moviesContainer {
+    height: var(--height-container);
+    width: var(--width-container);
+    background-color: green;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.movie {
+    height: var(--height-movie);
+    width: var(--width-movie);
+    margin: 10px 0;
+}
+
+img {
+    height: var(--height-movie-picture);
+    width: var(--width-movie-picture);
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.nextButton {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.prevButton {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
