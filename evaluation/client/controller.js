@@ -9,6 +9,7 @@ export const Controller = ((model, view) => {
             state.movies = movies;
         });
         nextMovies();
+        prevMovies();
     };
 
     const nextMovies = () => {
