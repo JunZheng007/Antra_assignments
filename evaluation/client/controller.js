@@ -15,7 +15,6 @@ export const Controller = ((model, view) => {
         const moviesContainer = document.querySelector(
             view.domstr.moviesContainer
         );
-        console.log(moviesContainer);
         moviesContainer.addEventListener("click", (event) => {
             if (event.target.className === "nextButton") {
                 state.firstMovie += 1;
@@ -27,7 +26,6 @@ export const Controller = ((model, view) => {
         const moviesContainer = document.querySelector(
             view.domstr.moviesContainer
         );
-        console.log(moviesContainer);
         moviesContainer.addEventListener("click", (event) => {
             if (event.target.className === "prevButton") {
                 state.firstMovie -= 1;

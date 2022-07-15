@@ -16,7 +16,6 @@ export const Model = ((api, view) => {
         set movies(movies) {
             this.#movies = movies;
             this.#totalMovies = movies.length;
-            console.log(movies);
             this.renewMovies();
         }
 
@@ -26,7 +25,6 @@ export const Model = ((api, view) => {
 
         set firstMovie(num) {
             this.#firstMovie = num;
-            console.log(this.#firstMovie);
             this.renewMovies();
         }
 
@@ -34,11 +32,10 @@ export const Model = ((api, view) => {
             const moviesContainer = document.querySelector(
                 view.domstr.moviesContainer
             );
-            let start = this.#firstMovie;
-            // this.#firstMovie + 4 > this.#totalMovies
-            //     ? this.totalMovies - 4
-            //     : this.#firstMovie;
-            console.log(start);
+            let start =
+                this.#firstMovie + 4 > this.#totalMovies
+                    ? this.totalMovies - 4
+                    : this.#firstMovie;
             let tmpl = view.createTmpl(this.movies.slice(start, start + 4));
             if (start === 0) tmpl += view.createButton("next");
             else if (start === this.#totalMovies - 4)
@@ -48,13 +45,6 @@ export const Model = ((api, view) => {
                 tmpl += view.createButton("prev");
             }
             view.render(moviesContainer, tmpl);
-
-            // const nextButton = document.querySelector(view.domstr.nextButton);
-            // console.log(nextButton);
-            // nextButton.addEventListener("click", (event) => {
-            //     this.#firstMovie += 1;
-            //     console.log(this.#firstMovie, start);
-            // });
         }
     }
 
